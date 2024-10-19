@@ -8,19 +8,19 @@ import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
 const App = () => {
-    const { theme } = useTheme();
-    return (
-        <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
-                <Navbar />
+  const { theme } = useTheme();
+  return (
+    <div className={classNames('app', {}, [theme])}>
+      <Suspense fallback="">
+        <Navbar />
 
-                <div className="content-page">
-                    <Sidebar />
-                    <AppRouter />
-                </div>
-            </Suspense>
+        <div className="content-page">
+          <Sidebar />
+          <AppRouter />
         </div>
-    );
+      </Suspense>
+    </div>
+  );
 };
 
 export default App;
